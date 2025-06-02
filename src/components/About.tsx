@@ -92,7 +92,7 @@ const About = () => {
               }}
             />
             <motion.img
-              src="C:\Users\anapa\OneDrive\Desktop\mypic.jpg"
+              src="/profile.jpg"
               alt="Vivek Vardhan - Full Stack Developer"
               className="relative rounded-2xl shadow-2xl border-4 border-white/20 dark:border-gray-700/20"
               whileHover={{ 
