@@ -92,7 +92,7 @@ const About = () => {
               }}
             />
             <motion.img
-              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="C:\Users\anapa\OneDrive\Desktop\mypic.jpg"
               alt="Vivek Vardhan - Full Stack Developer"
               className="relative rounded-2xl shadow-2xl border-4 border-white/20 dark:border-gray-700/20"
               whileHover={{ 
