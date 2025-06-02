@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Code, Palette, Lightbulb, Users } from 'lucide-react';
+import { Code, Palette, Lightbulb, Users, Cpu, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,23 +12,33 @@ const About = () => {
   const features = [
     {
       icon: Code,
-      title: 'MERN Stack Expert',
-      description: 'Specialized in building full-stack applications with MongoDB, Express.js, React.js, and Node.js.'
+      title: 'Full Stack Developer',
+      description: 'Proficient in building end-to-end web applications using modern technologies like React, Node.js, and MongoDB.'
+    },
+    {
+      icon: Cpu,
+      title: 'AI Integration Expert',
+      description: 'Experienced in integrating AI tools and APIs to create intelligent, automated solutions for complex problems.'
+    },
+    {
+      icon: Globe,
+      title: 'Cloud Solutions',
+      description: 'Skilled in deploying and managing applications on cloud platforms, ensuring scalability and reliability.'
     },
     {
       icon: Palette,
-      title: 'Creative Designer',
-      description: 'Crafting visually stunning interfaces with modern design principles and user-centric approach.'
+      title: 'UI/UX Designer',
+      description: 'Creating visually stunning and user-friendly interfaces that deliver exceptional user experiences.'
     },
     {
       icon: Lightbulb,
       title: 'Problem Solver',
-      description: 'Passionate about turning complex challenges into elegant, efficient, and scalable solutions.'
+      description: 'Analytical thinker with a passion for turning complex challenges into elegant, efficient solutions.'
     },
     {
       icon: Users,
-      title: 'Team Player',
-      description: 'Collaborative developer who thrives in team environments and delivers exceptional results.'
+      title: 'Team Collaborator',
+      description: 'Strong communicator who thrives in collaborative environments and delivers results through teamwork.'
     }
   ];
 
@@ -59,7 +68,7 @@ const About = () => {
         >
           <h2 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">About Me</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A passionate Full Stack Developer who transforms ideas into digital reality through code and creativity.
+            A passionate Full Stack Developer transforming ideas into digital reality through code, creativity, and innovation.
           </p>
         </motion.div>
 
@@ -83,7 +92,7 @@ const About = () => {
               }}
             />
             <motion.img
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=600&fit=crop&crop=face"
+              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Vivek Vardhan - Full Stack Developer"
               className="relative rounded-2xl shadow-2xl border-4 border-white/20 dark:border-gray-700/20"
               whileHover={{ 
@@ -105,19 +114,19 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Hi, I'm <span className="font-bold text-emerald-600 dark:text-emerald-400">Vivek Vardhan</span>, 
-                a dedicated Full Stack Developer who believes in the power of technology to transform ideas into reality. 
-                With expertise in the MERN stack, I create web applications that are not just functional, but truly exceptional.
+                Hello! I'm <span className="font-bold text-emerald-600 dark:text-emerald-400">Vivek Vardhan</span>, 
+                a Full Stack Developer with a passion for creating innovative web solutions. My journey in tech has been 
+                driven by curiosity and a desire to build applications that make a real difference.
               </p>
               <p>
-                My journey in web development has been driven by curiosity and a passion for solving real-world problems. 
-                From weather applications that help users plan their day to social platforms that connect minds, 
-                I've built projects that make a difference.
+                With expertise in the MERN stack and modern web technologies, I specialize in developing scalable 
+                applications that combine powerful functionality with intuitive user experiences. From weather 
+                applications to social platforms, I've built projects that solve real-world problems.
               </p>
               <p>
-                What sets me apart is my ability to blend technical excellence with creative design, 
-                ensuring every project delivers both outstanding performance and beautiful user experiences. 
-                I'm constantly learning, adapting, and pushing the boundaries of what's possible in web development.
+                I'm particularly interested in AI integration and cloud solutions, always staying current with the 
+                latest technologies to deliver cutting-edge solutions. When I'm not coding, I'm exploring new 
+                technologies or contributing to the developer community.
               </p>
             </div>
             
@@ -127,7 +136,7 @@ const About = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6 }}
             >
-              {['Full Stack Developer', 'MERN Specialist', 'UI/UX Enthusiast', 'Problem Solver'].map((skill, index) => (
+              {['Full Stack Developer', 'AI Enthusiast', 'Cloud Expert', 'Problem Solver'].map((skill, index) => (
                 <motion.span
                   key={skill}
                   className="bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium border border-emerald-200 dark:border-emerald-700"
@@ -145,7 +154,7 @@ const About = () => {
 
         <motion.div 
           ref={ref}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={container}
           initial="hidden"
           animate={inView ? "show" : "hidden"}

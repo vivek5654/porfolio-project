@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -13,26 +12,26 @@ const Projects = () => {
   const projects = [
     {
       title: 'Weather Application',
-      description: 'A comprehensive weather application built with React.js and Tailwind CSS. Features real-time weather data and 5-day weather prediction using OpenWeatherAPI with beautiful UI and responsive design.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
+      description: 'A comprehensive weather application built with React.js and Tailwind CSS. Features real-time weather data and 5-day weather prediction using OpenWeatherAPI. Includes dynamic weather icons, animated backgrounds based on weather conditions, and responsive design for all devices.',
+      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       technologies: ['React.js', 'Tailwind CSS', 'OpenWeatherAPI', 'JavaScript'],
-      github: '#',
+      github: 'https://github.com/vivek5654/weatherForecasting.git',
       live: '#',
       gradient: 'from-blue-400 to-cyan-400'
     },
     {
       title: 'Think Board',
-      description: 'A thought sharing platform where users can express their ideas by creating posts with titles and descriptions. Built with MERN stack and features secure data storage with MongoDB.',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop',
-      technologies: ['React.js', 'JavaScript', 'Express.js', 'Node.js', 'MongoDB'],
-      github: '#',
+      description: 'A thought-sharing platform built with MERN stack where users can express ideas through interactive posts. Features secure authentication, real-time updates, and collaborative features. Implemented with MongoDB for robust data storage and Express.js for efficient API handling.',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+      github: 'https://github.com/vivek5654/thinkboard.git',
       live: '#',
       gradient: 'from-purple-400 to-pink-400'
     },
     {
       title: 'Chatting Application',
-      description: 'A real-time chat application built with MERN stack. Features include image sharing with Cloudinary storage, real-time messaging using Socket.io, and user authentication.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
+      description: 'An ongoing real-time chat application leveraging Socket.io for instant messaging. Features include image sharing with Cloudinary storage, user authentication, and real-time notifications. Built with modern web technologies for optimal performance.',
+      image: 'https://images.pexels.com/photos/4126743/pexels-photo-4126743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       technologies: ['MERN Stack', 'Socket.io', 'Cloudinary', 'Real-time Chat'],
       github: '#',
       live: '#',
@@ -66,7 +65,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here are my three major projects that showcase my full-stack development expertise.
+            Explore my latest projects showcasing full-stack development expertise and creative problem-solving.
           </p>
         </motion.div>
 
@@ -83,23 +82,22 @@ const Projects = () => {
               className="group"
               variants={item}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              style={{ transformStyle: "preserve-3d" }}
+              style={{ perspective: "1000px" }}
             >
               <motion.div
-                className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/20 dark:border-gray-700/20"
+                className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/20 dark:border-gray-700/20 transform-gpu"
                 whileHover={{ 
-                  rotateY: 8,
+                  rotateY: 10,
                   rotateX: 5,
-                  z: 50,
-                  scale: 1.05
+                  scale: 1.05,
+                  transition: { duration: 0.4 }
                 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden group">
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover transform-gpu"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   />
@@ -112,6 +110,8 @@ const Projects = () => {
                     <div className="flex gap-4">
                       <motion.a
                         href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.3 }}
