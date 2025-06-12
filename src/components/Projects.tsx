@@ -33,7 +33,7 @@ const Projects = () => {
       description: 'An ongoing real-time chat application leveraging Socket.io for instant messaging. Features include image sharing with Cloudinary storage, user authentication, and real-time notifications. Built with modern web technologies for optimal performance.',
       image: 'https://images.pexels.com/photos/4126743/pexels-photo-4126743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       technologies: ['MERN Stack', 'Socket.io', 'Cloudinary', 'Real-time Chat'],
-      github: '#',
+      github: 'https://github.com/vivek5654/Chatting-Application-vite.git',
       live: '#',
       gradient: 'from-green-400 to-emerald-400'
     }
